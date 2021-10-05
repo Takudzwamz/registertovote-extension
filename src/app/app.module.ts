@@ -28,10 +28,10 @@ const routes: Route[] = [
     ErrorPageComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppCommonModule,
     FormsModule,
-    RouterModule.forRoot(routes, { useHash: false, relativeLinkResolution: 'legacy' })
+    RouterModule.forRoot(routes, { useHash: false, relativeLinkResolution: 'legacy', initialNavigation: 'enabled' })
   ],
   providers: [],
   bootstrap: [AppComponent]
