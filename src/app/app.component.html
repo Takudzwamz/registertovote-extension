@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet" />
+<header style=
+"   border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: #FFFFFF;
+" class="header">
+    <nav  class="navbar navbar-expand-md navbar-dark">
+    
+        <a routerLinkActive="active" style="background: #9B85CD; border-radius: 30px; color: white;margin:5px;" class="nav-link"
+            href="https://www.registertovotezw.live/">
+            <i style="font-size: 20px; margin-left: 10px; " class="fa fa-home" aria-hidden="true"></i>
+            Go Home
+        </a>
+        <button class="navbar-toggler" type="button" aria-label="Toggle navigation" (click)="toggleMenu()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse" [class.collapse]="isMenuCollapsed">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" routerLinkActive="active">
+                    <a style="background: #480470; border-radius: 30px; color: white;margin:5px; margin-right: 10px; border-color: red;" class="nav-link" routerLink="video-player">
+                     <i style="font-size: 20px; margin-left: 10px;" class="fa fa-play-circle" aria-hidden="true"></i>
+                        Election video Player
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a style="background: #480470; border-radius: 30px; color: white;margin:5px;" class="nav-link" href="https://www.registertovotezw.live/" >
+                        <i style="font-size: 20px; margin-left: 10px; " class="fa fa-person-booth" aria-hidden="true"></i>
+                       Go to Register To Vote ZW page
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main role="main" class="container mt-3">
+    <router-outlet></router-outlet>
+    
+</main>
+
